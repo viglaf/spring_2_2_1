@@ -14,27 +14,13 @@ public class Car {
     @Column
     private int series;
 
-    @OneToOne(mappedBy = "car", cascade = CascadeType.ALL)
-    private User user;
-
     public Car() {
-
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     public Car(String model, int series) {
         this.series = series;
         this.model = model;
     }
-
-    public Car(User user) {this.user = user;}
 
     public int getSeries() {return series;}
 
